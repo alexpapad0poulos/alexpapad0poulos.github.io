@@ -12,6 +12,11 @@ header {
   text-align: center;
 }
 
+.header-content {
+  max-width: 1200px; /* Add a max-width to center content on larger screens */
+  margin: 0 auto; /* Center the content horizontally */
+}
+
 header img {
   width: 200px; /* adjust as needed */
   height: auto;
