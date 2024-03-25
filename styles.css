@@ -1,15 +1,27 @@
 /* styles.css */
 
-body {
-  background-color: #ffffff; /* white background */
-  color: #333; /* default text color */
-  font-family: Arial, sans-serif; /* default font */
+#profile-photo {
+    transition: transform 0.3s ease;
+    transform-origin: center center;
 }
 
-header {
-  background-color: #4caf50; /* green header background */
-  padding: 20px;
-  text-align: center;
+#profile-photo:hover {
+    transform: scale(0.9);
+    z-index: 1;
+}
+
+.profile-photo {
+    width: 400px; /* Change to your desired width */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 300px; /* Change to your desired left margin */
+    margin-top: 20px; /* Change to your desired top margin */
+}
+body {
+    background-image: url("img3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* optional */
+    color: #FFE4B5;
 }
 
 .header-content {
@@ -23,6 +35,16 @@ header img {
   margin: 10px; /* adjust as needed */
 }
 
+p {
+    color: #FFE4B5; /* Change to your desired color */
+    font-size: 16px; /* Change to your desired font size */
+}
+hl {
+    color: #FFE4B5; /* Change to your desired color */
+    font-size: 24px; /* Change to your desired font size */
+}
+
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -30,5 +52,20 @@ ul {
 
 li {
   margin-bottom: 10px;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFE4B5; /* Button background color */
+    color: #000000; /* Button text color */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #98FB98; /* Button background color on hover */
 }
 
