@@ -1,33 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Publications - Alexander Papadopoulos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | Alexander Papadopoulos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e7eb;
+        }
+        .gradient-border {
+            position: relative;
+            border-radius: 0.5rem;
+        }
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: 0.6rem;
+            background: linear-gradient(45deg, #10b981, #3b82f6, #10b981);
+            z-index: -1;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .gradient-border:hover::before {
+            opacity: 1;
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <h1>Publications</h1>
-  </header>
+<body class="min-h-screen bg-cosmic-dark text-cosmic-text">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row justify-between items-center mb-12">
+            <div class="mb-6 md:mb-0">
+                <h1 class="text-4xl font-bold text-cosmic-green">Alexander Papadopoulos</h1>
+                <h2 class="text-xl text-gray-400">Publications & Talks - PLACEHOLDER</h2>
+            </div>
+            <nav class="flex space-x-6">
+                <a href="index.html" class="hover:text-cosmic-green transition-colors">Home</a>
+                <a href="publications.html" class="text-cosmic-green font-medium">Publications</a>
+            </nav>
+        </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="publications.html" class="active">Publications</a></li>
-      <li><a href="conferences.html">Conferences</a></li>
-      <li><a href="cv.html">CV</a></li>
-    </ul>
-  </nav>
+        <main class="mb-16">
+            <!-- Publications Section -->
+            <section class="gradient-border p-6 bg-cosmic-light mb-8">
+                <h2 class="text-2xl font-bold text-cosmic-green mb-6">Publications</h2>
+                
+                <div class="space-y-8">
+                    <div class="border-l-2 border-cosmic-green pl-4">
+                        <h3 class="text-xl font-semibold mb-2">Cosmological Constraints from Gravitational Wave Standard Sirens</h3>
+                        <p class="text-gray-400 mb-2">Journal of Cosmology and Astroparticle Physics, 2023</p>
+                        <p class="mb-2">First Author, with Collaborators</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-cosmic-green hover:underline flex items-center">
+                                <i data-feather="file-text" class="mr-1 w-4 h-4"></i> PDF
+                            </a>
+                            <a href="#" class="text-cosmic-green hover:underline flex items-center">
+                                <i data-feather="external-link" class="mr-1 w-4 h-4"></i> DOI
+                            </a>
+                            <a href="#" class="text-cosmic-green hover:underline flex items-center">
+                                <i data-feather="github" class="mr-1 w-4 h-4"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="border-l-2 border-cosmic-green pl-4">
+                        <h3 class="text-xl font-semibold mb-2">Probing Dark Energy with Multi-Messenger Observations</h3>
+                        <p class="text-gray-400 mb-2">Physical Review D, 2022</p>
+                        <p class="mb-2">Collaborating Author, with Main Author</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-cosmic-green hover:underline flex items-center">
+                                <i data-feather="file-text" class="mr-1 w-4 h-4"></i> PDF
+                            </a>
+                            <a href="#" class="text-cosmic-green hover:underline flex items-center">
+                                <i data-feather="external-link" class="mr-1 w-4 h-4"></i> DOI
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="border-l-2 border-cosmic-green pl-4">
+                        <h3 class="text-xl font-semibold mb-2">Statistical Methods for Gravitational Wave Data Analysis</h3>
+                        <p class="text-gray-400 mb-2">Monthly Notices of the Royal Astronomical Society, 2021</p>
+                        <p class="mb-2">First Author</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-cosmic-green hover:underline flex items-center">
+                                <i data-feather="file-text" class="mr-1 w-4 h-4"></i> PDF
+                            </a>
+                            <a href="#" class="text-cosmic-green hover:underline flex items-center">
+                                <i data-feather="external-link" class="mr-1 w-4 h-4"></i> DOI
+                            </a>
+                            <a href="#" class="text-cosmic-green hover:underline flex items-center">
+                                <i data-feather="github" class="mr-1 w-4 h-4"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="border-l-2 border-cosmic-green pl-4">
+                        <h3 class="text-xl font-semibold mb-2">PhD Thesis: Cosmology with Gravitational Waves</h3>
+                        <p class="text-gray-400 mb-2">[Your University], 2020</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-cosmic-green hover:underline flex items-center">
+                                <i data-feather="file-text" class="mr-1 w-4 h-4"></i> Full Thesis
+                            </a>
+                            <a href="#" class="text-cosmic-green hover:underline flex items-center">
+                                <i data-feather="book" class="mr-1 w-4 h-4"></i> University Library
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-  <main>
-    <ul>
-      <li><a href="paper1.pdf" target="_blank">Paper Title 1</a> <span class="placeholder">(placeholder link)</span></li>
-      <li><a href="paper2.pdf" target="_blank">Paper Title 2</a> <span class="placeholder">(placeholder link)</span></li>
-    </ul>
-    <p class="placeholder">More publications coming soon...</p>
-  </main>
+            <!-- Conference Talks Section -->
+            <section class="gradient-border p-6 bg-cosmic-light">
+                <h2 class="text-2xl font-bold text-cosmic-green mb-6">Conference Talks & Presentations</h2>
+                
+                <div class="space-y-8">
+                    <div class="border-l-2 border-cosmic-green pl-4">
+                        <h3 class="text-xl font-semibold mb-2">Keynote: The Future of Gravitational Wave Cosmology</h3>
+                        <p class="text-gray-400 mb-2">International Conference on Gravitational Physics, 2023</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-cosmic-green hover:underline flex items-center">
+                                <i data-feather="video" class="mr-1 w-4 h-4"></i> Recording
+                            </a>
+                            <a href="#" class="text-cosmic-green hover:underline flex items-center">
+                                <i data-feather="file-text" class="mr-1 w-4 h-4"></i> Slides
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="border-l-2 border-cosmic-green pl-4">
+                        <h3 class="text-xl font-semibold mb-2">Invited Seminar: New Cosmological Probes with LISA</h3>
+                        <p class="text-gray-400 mb-2">[University Name] Physics Colloquium, 2022</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-cosmic-green hover:underline flex items-center">
+                                <i data-feather="file-text" class="mr-1 w-4 h-4"></i> Slides
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="border-l-2 border-cosmic-green pl-4">
+                        <h3 class="text-xl font-semibold mb-2">Contributed Talk: Dark Energy Constraints from GW170817</h3>
+                        <p class="text-gray-400 mb-2">American Physical Society April Meeting, 2021</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-cosmic-green hover:underline flex items-center">
+                                <i data-feather="file-text" class="mr-1 w-4 h-4"></i> Abstract
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="border-l-2 border-cosmic-green pl-4">
+                        <h3 class="text-xl font-semibold mb-2">Poster: Machine Learning for Gravitational Wave Detection</h3>
+                        <p class="text-gray-400 mb-2">Machine Learning in Science Conference, 2020</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-cosmic-green hover:underline flex items-center">
+                                <i data-feather="image" class="mr-1 w-4 h-4"></i> Poster
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+    <script>
+        feather.replace();
+        
+        // Simple animation for publication entries
+        document.addEventListener('DOMContentLoaded', function() {
+            const entries = document.querySelectorAll('.border-l-2');
+            entries.forEach((entry, index) => {
+                entry.style.opacity = '0';
+                entry.style.transform = 'translateX(-20px)';
+                entry.style.transition = `all 0.4s ease ${index * 0.1}s`;
+                
+                setTimeout(() => {
+                    entry.style.opacity = '1';
+                    entry.style.transform = 'translateX(0)';
+                }, 100);
+            });
+        });
+    </script>
 </body>
 </html>
 

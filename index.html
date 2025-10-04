@@ -1,33 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Alexander Papadopoulos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander Papadopoulos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cosmic: {
+                            dark: '#0a0a0a',
+                            light: '#1a1a1a',
+                            green: '#10b981',
+                            text: '#e5e7eb'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e7eb;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+        }
+        .gradient-border {
+            position: relative;
+            border-radius: 0.5rem;
+        }
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: 0.6rem;
+            background: linear-gradient(45deg, #10b981, #3b82f6, #10b981);
+            z-index: -1;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .gradient-border:hover::before {
+            opacity: 1;
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <h1>Alexander Papadopoulos</h1>
-    <h2>PhD Student at the Institute for Gravitational Research, University of Glasgow</h2>
-    <img class="profile-photo" src="img4.jpg" alt="Profile photo">
-  </header>
+<body class="min-h-screen bg-cosmic-dark text-cosmic-text">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row justify-between items-center mb-12">
+            <div class="mb-6 md:mb-0">
+                <h1 class="text-4xl font-bold text-cosmic-green">Alexander Papadopoulos</h1>
+                <h2 class="text-xl text-gray-400">Gravitational Wave Cosmologist</h2>
+            </div>
+            <nav class="flex space-x-6">
+                <a href="index.html" class="text-cosmic-green font-medium">Home</a>
+                <a href="publications.html" class="hover:text-cosmic-green transition-colors">Publications</a>
+            </nav>
+        </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="conferences.html">Conferences</a></li>
-      <li><a href="cv.html">CV</a></li>
-    </ul>
-  </nav>
+        <!-- Main Content -->
 
-  <main>
-    <p>I am a Scottish PhD student living in Glasgow. My research focuses on using gravitational waves to learn about cosmology and the large-scale structure of the universe. I am particularly interested in Bayesian inference and the development of new models for compact binary coalescence populations.</p>
-    <p>Outside of physics, I enjoy hiking, fencing, and swimming.</p>
-  </main>
+        <main class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <!-- Biography Section -->
+            <section class="gradient-border p-6 bg-cosmic-light">
+                <div class="flex items-center mb-6">
+                    <div class="w-20 h-20 rounded-full overflow-hidden mr-4">
+                        <img src="profile.JPG" alt="Profile" class="w-full h-full object-cover">
+                    </div>
+                    <h2 class="text-2xl font-bold text-cosmic-green">Biography</h2>
+                </div>
+                <p class="mb-4">I am a PhD student working on gravitational-wave cosmology, working with Dr. Rachel Gray and Dr. Chris Messenger. My research focusses in particular are using the population of gravitational wave sources as an independent probe of the Hubble constant, and the optimisation of cosmological inference pipelines.</p>
+                <p class="mb-4">As part of my research, I am one of the lead developers of <i>gwcosmo</i>, a cosmological pipeline which relies on Bayesian inference.</p>
+                <p>I also am a member of both the LIGO - Virgo - KAGRA Collaboration (LVK) and the LISA consortium.</p>
+            </section>
+
+
+            <!-- Contact Box -->
+
+            <section class="gradient-border p-6 bg-cosmic-light">
+		    <h2 class="text-2xl font-bold text-cosmic-green mb-6">Contact</h2>
+		    <div class="space-y-4">
+			<div class="flex items-center">
+			    <i data-feather="mail" class="mr-3 text-cosmic-green"></i>
+			    <a href="mailto:a.papadopoulos.1@research.gla.ac.uk" class="hover:text-cosmic-green transition-colors">a.papadopoulos.1@research.gla.ac.uk</a>
+			</div>
+			<div class="flex items-center">
+			    <i data-feather="map-pin" class="mr-3 text-cosmic-green"></i>
+			    <span>Institute for Gravitational Research, University of Glasgow, Glasgow, Scotland</span>
+			</div>
+			<div class="flex items-center">
+			    <i data-feather="github" class="mr-3 text-cosmic-green"></i>
+			    <a href="https://github.com/alexpapad0poulos" class="hover:text-cosmic-green transition-colors">github.com/alexpapad0poulos</a>
+			</div>
+			<div class="flex items-center">
+			    <i data-feather="linkedin" class="mr-3 text-cosmic-green"></i>
+			    <a href="https://www.linkedin.com/in/alexander-papadopoulos-0971b7292" class="hover:text-cosmic-green transition-colors">linkedin/alexander-papadopoulos</a>
+			</div>
+			<div class="flex items-center">
+			    <i data-feather="gitlab" class="mr-3 text-cosmic-green"></i>
+			    <a href="https://git.ligo.org/lscsoft/gwcosmo" class="hover:text-cosmic-green transition-colors">gwcosmo</a>
+			</div>
+		    </div>
+		</section>
+
+
+            <!-- Career Experience -->
+
+            <section class="gradient-border p-6 bg-cosmic-light lg:col-span-2">
+
+                <h2 class="text-2xl font-bold text-cosmic-green mb-6">Academic Experience</h2>
+
+                <div class="space-y-8">
+
+                    <div class="border-l-2 border-cosmic-green pl-4">
+
+                        <div class="flex justify-between items-start flex-col md:flex-row">
+
+                            <h3 class="text-xl font-semibold">PhD Student</h3>
+
+                            <span class="text-gray-400">2023 - Present</span>
+
+                        </div>
+
+                        <p class="text-gray-400 mb-2">Institute for Gravitational Research, University of Glasgow</p>
+
+                        <p>Research on gravitational-wave cosmology, project title: "GW Cosmology in the Advanced Detector Era".</p>
+
+                    </div>
+
+                    
+
+                    <div class="border-l-2 border-cosmic-green pl-4">
+
+                        <div class="flex justify-between items-start flex-col md:flex-row">
+
+                            <h3 class="text-xl font-semibold">Member</h3>
+
+                            <span class="text-gray-400">2023 - Present</span>
+
+                        </div>
+
+                        <p class="text-gray-400 mb-2">LIGO - Virgo - KAGRA Collaboration</p>
+
+                        <p>Analyst and pipeline developer for GWTC-4.0 cosmology paper. Analysis Co-ordinator and Paper Writing Team member for upcoming GWTC-5.0 cosmology paper.</p>
+
+                    </div>
+
+                    
+
+                    <div class="border-l-2 border-cosmic-green pl-4">
+
+                        <div class="flex justify-between items-start flex-col md:flex-row">
+
+                            <h3 class="text-xl font-semibold">Visiting Researcher</h3>
+
+                            <span class="text-gray-400">2025</span>
+
+                        </div>
+
+                        <p class="text-gray-400 mb-2">Laboratoire des 2 Infinis, University of Toulouse</p>
+
+                        <p>Visiting the group of Dr. Nicola Tamanini to collaborate on spectral siren cosmology and GW population simulations.</p>
+
+                    </div>
+
+                    
+
+                    <div class="border-l-2 border-cosmic-green pl-4">
+
+                        <div class="flex justify-between items-start flex-col md:flex-row">
+
+                            <h3 class="text-xl font-semibold">MPhys Astrophysics</h3>
+
+                            <span class="text-gray-400">2018 - 2023</span>
+
+                        </div>
+
+                        <p class="text-gray-400 mb-2">University of Edinburgh</p>
+
+                        <p>Graduated with 1st class master's degree in Astrophysics, with a thesis on the evolution of large scale structure under different formation scenarios.</p>
+
+                    </div>
+
+                    
+
+                </div>
+
+            </section> 
+
+
+            <!-- CV Download -->
+
+            <section class="gradient-border p-6 bg-cosmic-light lg:col-span-2 flex flex-col md:flex-row justify-between items-center">
+
+                <div>
+
+                    <h2 class="text-2xl font-bold text-cosmic-green mb-2">Curriculum Vitae</h2>
+
+                    <p class="text-gray-400">Updated: July 2025</p>
+
+                </div>
+
+                <a href="CV_long.pdf" class="mt-4 md:mt-0 px-6 py-3 bg-cosmic-green text-cosmic-dark font-semibold rounded-lg hover:bg-opacity-90 transition-all glow-hover flex items-center">
+
+                    <i data-feather="download" class="mr-2"></i>
+
+                    Download CV (PDF)
+
+                </a>
+
+            </section>
+
+        </main> 
+
+    </div>
+
+    <script>
+        feather.replace();
+        
+        // Simple animation for sections
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            sections.forEach((section, index) => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = `all 0.5s ease ${index * 0.1}s`;
+                
+                setTimeout(() => {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }, 100);
+            });
+        });
+    </script>
 </body>
 </html>
-
 
